@@ -1,0 +1,1554 @@
+pip install -U pygame --user
+
+Python Overview
+---------------------
+	It is an open source, high level, interpreted, interactive language.
+	It is an object oriented scripting language and beginner-level programming language.
+	It is developed by Guido van Rossum in the early 1990s.
+	It runs on many Unix variants, on the Mac, and on Windows 2000 and later.
+
+Applications of Python
+-------------------------
+	Developing Games Application.
+	Developing Web Application.
+	Developing Stand-Alone(Windows) Application.
+	Developing Networking Application.
+
+Features of Python
+----------------------
+i) Open source : 
+	Python is publicly available open source software, any one can use source code that doesn't cost anything.
+
+ii) Easy-to-learn :
+	Clear and easy syntax, few keywords, simple structure, and a clearly defined syntax, no type declarations, automatic memory management.
+
+iii) High-level Language : 
+	High-level language refers to the higher level of concept from machine language . Python is an example of a high-level language like C, C++, Perl, and Java with low-level optimization.
+
+iv) Portable : 
+	It is able to run across all platforms with few or no change in source code. Python is portable and can be used on Linux, Windows, Macintosh, Solaris.
+
+v) Object-Oriented :
+	Python is a full-featured object-oriented programming language, with features such as classes, inheritance, objects, and overloading.
+	It also supports functional and structured programming methods
+
+vi) Interpreted :
+	Python programs are interpreted, takes source code as input, and then compiles (to portable byte-code) each statement and executes it immediately. No need to compiling or linking.
+
+vii) Extendable :
+	We can add low-level modules to the Python interpreter. These modules enable programmers to add or customize their tools to be more efficient.
+
+viii) Libraries :
+	Databases, web services, networking, numerical packages, graphical user interfaces.
+
+
+Python Program
+--------------------
+* Python programs are composed of modules.
+* Modules contain functions and statements.
+* Statements contain expressions.
+* Expressions create and process objects.
+
+
+-----------------------------
+Python - Character Set
+-----------------------------
+
+1) Identifiers:-
+------------------
+	A Python identifier is a name used to identify a variable, function, class, module, or other object.
+	Variables are used to identify the values which are stored in the memory location.
+	
+Rules:
+•	Class names start with an uppercase letter.
+•	All other identifiers start with a lowercase letter.
+•	Can Start Alphabet or Underscore but not with number.
+•	Can't Include Spaces.
+•	Can't Use Special Characters, except Underscore (_).
+•	32 Characters.
+•	Can’t Include Keywords.
+Eg:-
+   a=16;
+   b=4;
+   a=b=c=25;
+   x,y,z=5,6,"Ayyappan";
+
+
+2) Keywords:-
+-----------------
+	They're reserved words.
+	They can not be used to declare the variables or functions.
+'Python' keywords are:
+   if, else, elif, while, for, pass, break, continue, and, or, not, del, def, import, in, is, return.
+
+
+3) Standard Data Types:-
+------------------------------
+	The data stored in memory can be of many types. Python has various standard data types that are used to define the operations possible on them and the storage method for each of them.
+Python has five standard data types:
+i)  Numbers
+	int, float, long, complex
+
+ii) String
+	Strings are identified as a contiguous set of characters represented in the quotation marks.
+	Python allows for either pairs of single or double quotes.
+
+iii) List
+	A list contains items separated by commas and enclosed within square brackets ([]).
+	Elements and size can be changed.
+	Lists are similar to arrays in C but one exception that all the items belonging to a list can be of different data type.
+eg:-
+list1=["Vinayagar",5,'Ayyappan',25.22,1604L]
+
+iv) Tuple
+	A tuple contains items separated by commas and enclosed within paranthesis ( () ).
+	Elements and size can not be changed.
+eg:-
+tup1=("Vinayagar",5,'Ayyappan',25.22,1604L)
+
+v) Dictionary
+	Python's dictionary is kind of hash table type. It works like associative array which consists of key-value pairs.
+	It is enclosed by curly braces ({  }) and values can be assigned and 
+accessed using square braces ([]).
+eg:-
+dict1={1:'Java', 2:'Python', 3:'PHP', 4:"Spring", 5:"Hibernate"};
+dict1[5], then o/p is: Hibernate
+
+
+4) 'Python' Constants(Literals):-
+--------------------------------------
+i) Integer constants
+eg:-
+	25, 16, 4
+
+ii) Long constants
+eg:-
+	2504162200L, 25000000L
+	0o122L	==>82		(if 0o is preceeded, it is octal);
+	0x122L	==>290		(if 0x is preceeded, it is hexadecimal);
+
+iii) Float constants
+eg:-
+	456.547, 56.78
+
+iv) Complex constants
+eg:-
+	5+22j, 25j, 0.422j
+
+v) String constants
+eg:-
+	'R', 'H', "Madurai", "Temple"
+Note:-
+	The triple quotes are used to span the string across multiple lines.
+eg:-
+	"""My City Is Madurai;
+	    Madurai is temple City.""";
+
+5) Operators:-
+-----------------
+i) Arithmetic Operators
+	+, -, *, /, %
+	Exponent		-->	**
+	Floor Division	-->	//
+eg:-
+a=7.0;b=2.0
+a**b	-->	49.0
+a//b	-->	3.0
+
+ii) Relational Operators
+	>, >=, <, <=, ==, !=
+
+iii) Logical Operators
+	and (Logical AND)
+	or (Logical OR)
+	not (Logical NOT)
+
+iv) Assignment Operators
+	a=10;
+	b=a;
+	c=a+b;
+        a) compound assignment:-
+	eg:-
+	sum=sum+5;(or)sum+=5;(this is compound assignment)
+
+v) Bitwise Operators
+	&	Bitwise AND
+	|	Bitwise OR
+	^	Bitwise XOR
+	~	Binary 1's complement
+	<<	Left Shift
+	>>	Right Shift
+
+vi) Membership Operators
+    in	--> Evaluates to true if it finds a value in the specified sequence and false otherwise.
+    not in	--> Evaluates to true if it doesn't find a value in the specified sequence and false otherwise.
+
+vii) Identity Operators
+    is	-->Evaluates to true if the variables on either side of the operator point to the same object and false otherwise.
+    is not	-->Evaluates to false if the variables on either side of the operator point to the same object and true otherwise.
+
+6) Lines and Indentation:-
+-------------------------------
+	Python provides no braces to indicate blocks of code for class and function definitions or flow control.
+	Blocks of code are denoted by line indentation, which is rigidly enforced.
+	The number of spaces in the indentation is variable, but all statements within the block must be indented the same amount.
+
+7) Multiple Statement Groups as Suites:-
+-----------------------------------------------
+	A group of individual statements, which make a single code block are called suites in Python.
+	Compound or complex statements, such as if, while, def, and class require a 
+header line and a suite.
+	Header lines begin the statement (with the keyword) and terminate with a colon (:) and are followed by one or more lines which make up the suite.
+
+Note:-
+---------
+1) Functions to display an output on Std O/P device:-
+
+print("welcome");
+m=25;
+print("Result: ",m);
+print("Result: %d"%m);
+print("Result: "+str(m));
+
+2) Function to get an input from Std I/P device:-
+
+input([prompt]) --> It returns string.(we can give expression)
+
+
+
+Conversion Functions:
+---------------------------
+int(string x)	--> Converts from string to int;
+long(string x)	--> Converts from string to long;
+float(string x)	--> Converts from string to float;
+str(x)		--> Converts from number type to string type;
+chr(x)		--> Converts from integer to character;
+ord(x)		--> Converts from character to integer;
+oct(x)		--> Converts from integer to octal string;
+hex(x)		--> Converts from integer to hexadecimal string;
+list(s)		--> Converts a sequence to a list.
+tuple(s)		--> Converts a sequence to a tuple.
+dict(s)		--> Converts a sequence to a dict.
+complex(real[,imag])--> Creates a complex number.
+
+
+Mathematical Functions
+----------------------------
+abs(x)	--> The absolute value of x: the (positive) distance between x and zero.
+ceil(x)	--> The ceiling of x: the smallest integer not less than x
+floor(x)	--> The floor of x: the largest integer not greater than x
+pow(x,y)	--> The value of x**y
+sqrt(x)	--> The square root of x for x > 0
+range([start,]stop[,step])
+	--> It selects value from range(start,stop,step);
+Note:-
+Use the following statement to use mathematical functions
+	from math import *	
+
+
+Command Line Arguments
+--------------------------------
+	When we run python in command prompt, we can give some values at this line which can be retrieved through following variable of sys module:-
+	sys.argv;
+To get length of sequence or command line args:-
+	len(sys.argv);
+
+
+----------------------------------------------------------------
+Decision Making Statements(Conditional Statements)
+----------------------------------------------------------------
+	It tests the logical condition and it returns true if the condition is satisfied otherwise returns false.
+	Python programming language assumes any non-zero and non-null values as True, and if it is either zero or null, then it is assumed as False value.
+
+i) Simple if
+--------------
+	If the boolean expression evaluates to True, then the block of statement(s)  inside the if statement is executed. If boolean expression evaluates to False, then the first set of code after the end of the if statement(s) is executed.
+syntax:-
+if <expression>:
+   statement(s)
+
+ii) if...else statement
+-------------------------
+	If the boolean expression evaluates to True, then the block of statement(s)  inside the if statement is executed, otherwise the block of statement(s) inside the else statement is executed
+syntax:-
+if <expression>:
+   statement(s)
+else:
+   statement(s)
+
+iii) elif ladder statement
+----------------------------
+	The elif statement allows us to check multiple expressions for True and executes a block of code as soon as one of the conditions evaluates to True.
+syntax:-
+if <expression1>:
+   statement(s)
+elif <expression2>:
+   statement(s)
+elif <expression3>:
+   statement(s)
+else:
+   statement(s)
+
+iv) Nested if statement
+---------------------------
+	We can check more than one condition.
+syntax:-
+if <expression1>:
+   if <expression2>:
+      statement(s)
+
+
+--------------------------
+Looping Statements
+--------------------------
+	They are used to execute group of statements repeatedly until the given condition becomes false.
+
+i) while loop
+----------------
+	It executes a statement or group of statements multiple times while a given condition is True. It tests the condition before executing the loop body.
+syntax:-
+while <expression>:
+   statement(s)
+
+ii) for loop
+-------------
+	To read the elements from any sequence(list,tuple,dictionary,string) one by one for each iteration until the entire sequence is exhausted.
+syntax:-
+for <iterating_var> in <sequence>:
+  statement(s)
+
+Note:-
+Using else statement with Loops
+-------------------------------------
+	Python supports to have an else statement associated with a loop statement.
+i) If the else statement is used with a for loop, the else statement is executed when the loop has exhausted iterating the list.
+ii) If the else statement is used with a while loop, the else statement is executed 
+when the condition becomes false.
+
+
+
+
+----------------------
+Python - Sequence
+----------------------
+	The most basic data structure in Python is the sequence. Each element of a sequence is assigned a number - its index. The first index is zero, the second index is one, and so forth.
+	We can do several operations on sequence such as indexing, slicing, adding, multiplying, and checking for membership, finding the length of a sequence and for finding its largest and smallest elements.
+Available Sequences:-
+String, List, Tuple, Dictionary
+
+General Operations in Sequence:-
+i) Concatenation	--> +   (Concatenates more than one sequence)
+ii) Repetition	--> *   (Multiplies the sequence by the given times).
+iii) Indexing	--> []   (Returns element of the given index)
+iv) Slicing	--> [:] (Returns the elements from start index to end index).
+v) len		--> Gives the total elements of the sequence.
+vi) min		--> Returns item from the sequence with min value.
+vii) max		--> Returns item from the sequence with max value.
+viii) count	--> Returns count of how many times a given item occurs in sequence.
+ix) index		--> Returns the index in sequence that obj appears.
+x) for loop	--> Iteration (To read the elements from sequence 1 by 1).
+xi) membership operators	--> To check whether a given value is avaialble or not in the specified sequence.
+
+
+
+--------------------
+Python - Strings
+--------------------
+	We can create a string simply by enclosing characters in quotes. Python treats single quotes the same as double quotes.
+	To access substrings, use the square brackets for slicing along with the index or indices to obtain the substring.
+
+
+String Methods:-
+--------------------
+1) len(str);
+	Returns Length of string.
+2) find(str[, beg, end])
+	Determines if str occurs in string and returns index if found.
+3) index(str[, beg, end])
+	Same as find(), but raises an exception if str not found.
+4) rfind(str[, beg, end])
+	Same as find(), but search from right in string.
+5) rindex(str[, beg, end])
+	Same as rfind(), but raises an exception if str not found.
+6) lstrip()
+	Removes all leading whitespace in string.
+7) rstrip()
+	Removes all trailing whitespace of string. 
+8) strip()
+	Removes all leading and trailing whitespace in string.
+9) ljust(width[, fillchar])
+	Returns a space-padded string with the original string left-justified to a total of width.
+10) rjust(width[, fillchar])
+	Returns a space-padded string with the original string right-justified to a total of width.
+11) center(width[, fillchar])
+	Returns a space-padded string with the original string centered to a total of width.
+12) count(str[, beg,end])
+	Counts how many times str occurs in a string.
+13) capitalize()
+	Capitalizes first letter of string.
+14) title()
+	Returns "titledcase" version of string, that is, all words begin with uppercase.
+15) swapcase()
+	Inverts case for all letters in string.
+16) upper()
+	Converts lowercase letters in string to uppercase.
+17) lower()
+	Converts uppercase letters in string to lowercase.
+18) endswith(str[, beg, end])
+	Determines if string ends with str.
+19) startswith(str[, beg, end])
+	Determines if string starts with str.
+20) max(str)
+	Returns the max alphabetical character from the string str.
+21) min(str)
+	Returns the min alphabetical character from the string str.
+22) replace(old, new [, max])
+	Replaces all occurrences of old in string with new or at most max occurrences if max given.
+23) split(str=""[, num])
+	Splits string according to delimiter str (space if not provided) and returns list of substrings; split into at most num substrings if given.
+24) zfill (width)
+	Returns original string leftpadded with zeros to a total of width;
+25) join(seq)
+	Merges the string representations of elements in sequence seq into a string, with separator string.
+26) encode(encoding='UTF-8',errors='strict')
+	Returns encoded string version of string;
+27) decode(encoding='UTF-8',errors='strict')
+	Decodes the string using the codec registered for encoding.
+eg:-
+str = "My City is Madurai.";
+str1 = str.encode('base64','strict');
+str2 = str.decode('base64','strict');
+
+
+
+Python - List
+----------------
+	The list is a most versatile datatype available in Python which can be written as a list of comma-separated values (items) between square brackets. All the items in a list can be of the different type.
+eg:-
+list1=["java","python","jsp","hibernate","spring","php","asp.net"];
+
+Accessing elements in List:-
+i) Use the square brackets for slicing along with the index to obtain value at the given index.
+eg:-
+list1[3]	--> hibernate
+list1[5:]	--> ['php', 'asp.net']
+list1[0:3]	--> ['java', 'python', 'jsp']
+list1[2:5]	--> ['jsp', 'hibernate', 'spring']
+
+ii) To read all the elements from list, use for loop.
+eg:-
+for s1 in list1:
+   print s1;
+
+Deleting elements from List:-
+	To remove a list element, use either the del statement if we know exactly which element(s) we delete or the remove() method if we do not know.
+eg:-
+del list1[1];
+
+
+Methods of List:-
+-----------------
+1) list(seq)	--> Converts a tuple into list.
+2) append(obj)	--> Appends object obj to list.
+3) extend(seq)	--> Appends the contents of seq to list.
+4) insert(index, obj)--> Inserts object obj into list at offset index.
+5) count(obj)	--> Returns count of how many times obj occurs in list.
+6) index(obj)	--> Returns the index in list that obj appears.
+7) remove(obj)	--> Removes object obj from list.
+8) reverse()	--> Reverses objects of list in place.
+9) sort()		--> Sorts objects of list.
+10) pop([index])  -->Removes and returns last object from list.
+
+
+
+Python - Tuple
+------------------
+	A tuple is a sequence of immutable Python objects. Tuples are sequences, just like List. The differences between tuples and lists are, the tuples cannot be changed unlike lists and tuples use parentheses. We are able to take portions of existing tuples to create new tuple.
+
+Note:-
+	A tuple can be created with no paranthesis.
+	If some sequence is created with no parenthesis, that is considered as Tuple by default.
+eg:-
+tup1=("java","python","jsp","hibernate","spring","php","asp.net");
+	(or)
+tup1="java","python","jsp","hibernate","spring","php","asp.net";
+
+Accessing elements in Tuple:-
+i) Use the square brackets for slicing along with the index to obtain value at the given index.
+eg:-
+tup1[3]	--> hibernate
+tup1[5:]	--> ('php', 'asp.net')
+tup1[0:3]	--> ('java', 'python', 'jsp')
+tup1[2:5]	--> ('jsp', 'hibernate', 'spring')
+
+ii) To read all the elements from list, use for loop.
+eg:-
+for s1 in tup1:
+   print s1;
+
+Deleting Tuple Elements:-
+	Removing individual tuple elements is not possible. To explicitly remove an entire tuple, just use the del statement.
+eg:-
+del tup1;
+
+Methods of Tuple:-
+-----------------------
+1) tuple(seq)	--> Converts a list into tuple.
+2) count(obj)	--> Returns count of how many times obj occurs in tuple.
+3) index(obj)	--> Returns the index in tuple that obj appears.
+
+
+
+Python - Dictionary
+-----------------------
+	Dictionary is a sequence which consists of key-value pairs.
+	Each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces.
+	Keys are unique within a dictionary while values may or may not be unique.
+	The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples.
+eg:-
+dict1 = {1:"java", 2:"hibernate", 3:"spring",4:"jsp",5:"php",6:"python"}
+
+Accessing elements in Dictionary:-
+i) Use the square brackets for slicing along with the key to obtain value at the given index.
+eg:-
+dict1[5]		--> php
+
+Deleting Dictionary Elements:-
+	We can either remove individual dictionary elements or clear the entire contents of a dictionary. We can also delete entire dictionary in a single operation.
+	To explicitly remove an entire dictionary, just use the del statement.
+eg:-
+del dict1[3];	# removes entry with key 3
+dict1.clear()	# removes all entry in dict1
+del dict1		# deletes entire dictionary
+
+Methods of Dictionary:-
+----------------------------
+1) len(dict)	--> Gives the total length of the dict.
+2) str(dict)	--> Produces a printable string representation of a dictionary
+3) clear()		--> Removes all elements of dictionary.
+4) copy()		--> Returns a shallow copy of dictionary.
+5) dict.fromkeys(seq[,value])
+	--> Create a new dict with keys from seq and values set to value.
+6) get(key[, default=None])
+	--> Returns value of given key or default if key not in dictionary
+7) items()	--> Returns a list of dict's (key, value) tuple pairs
+8) keys()	--> Returns list of dictionary dict's keys
+9) values()	--> Returns list of dictionary dict's values 
+
+
+
+----------------------
+Python - Functions
+----------------------
+	It is a block which contains set of executable statements to perform particular task, reusable code and to avoid repetition of code.
+
+Rules to define a function:-
+--------------------------------
+i) Function blocks begin with the keyword "def" followed by the function name and parentheses.
+ii) The first statement of a function can be an optional statement - the documentation string of the function or docstring.
+iii) The code block within every function starts with a colon (:) and is indented.
+iv) The statement return [expression] exits a function, optionally passing back an expression to the caller. A return statement with no arguments is the same as return None.
+
+Syntax to define a function:-
+def functionname(args):
+   "function_docstring"
+   function_suite
+   return [expression]
+
+Types of Variables:-
+------------------------
+i) Local Variables
+	Variables which are defined inside the function.
+	Their scope and life time is available within that function only.
+ii) Global Variables:-
+	Variables which are defined outside the function.
+	Their scope and life time is available within all the functions of a program.
+
+Note:-
+	All the parameters (arguments) in the Python language are passed by reference. It means if we change what a parameter refers to within a function, the change also reflects back in the calling function.
+
+Function Arguments:-
+--------------------------
+i) Required arguments
+ii) Keyword arguments
+iii) Default arguments
+iv) Variable-length arguments
+
+i) Required Arguments:-
+	Required arguments are the arguments passed to a function in correct positional order. 
+	The number of arguments in the function call should match exactly with the function definition.
+
+ii) Keyword Arguments:-
+	It is related to the function calls.
+	When we use keyword arguments in a function call, the caller identifies the  arguments by the parameter name.
+	It allows us to  place them out of order because the python interpreter is able to use the keywords provided to match the values with parameters.
+
+iii) Default Arguments:-
+	A default argument is an argument that assumes a default value if a value is not provided in the function call for that argument.
+
+iv) Variable-Length Arguments:-
+	We may need to process a function for more arguments than you specified while defining the function. These arguments are called variable-length arguments.
+syntax:-
+def functionname([formal_args,] *var_args_tuple ):
+   "function_docstring"
+   function_suite
+   return [expression]
+
+
+Anonymous Functions:-
+----------------------------
+i) We can use the "lambda" keyword to create small anonymous functions to execute single statement.
+ii) Lambda forms can take any number of arguments but return just one value in the form of an expression.
+iii) They cannot contain commands or multiple expressions.
+iv) An anonymous function cannot be a direct call to print because lambda requires an expression.
+v) Lambda functions cannot access variables other than those in their parameter list and those in the global namespace.
+
+syntax:-
+lambda [arg1 [,arg2,.....argn]]:expression
+
+
+
+eg:-
+a=lambda i:i+1;
+b=lambda i:i*2;
+
+def compose():
+    return lambda i:a(b(i));
+
+x=compose();
+print(x(25));
+
+
+
+---------------------
+Python - Modules
+---------------------
+	A Module is a file consisting of Python code.
+	The Python code for a module named a name normally resides in a file named aname.py.
+	A module can define functions, classes and variables.
+	A module can also include runnable code.
+
+The import Statement:-
+	We can use any Python source file as a module by executing an import statement in some other Python source file.
+syntax:-
+import module1[,module2,.....];
+
+The from...import Statement:-
+	Using "from" statement, we can import specific attributes from a module into the current program.
+syntax:-
+from modulename import name1[,name2,name3.....];
+eg:-
+i) from madurai import display,show; 
+	# here madurai is module(madurai.py file), display and show are fns.
+ii) from madurai import *;
+	# It imports all attributes and functions from module madurai
+
+
+Packages in Python:-
+	A package is a hierarchical file directory structure that defines a single Python application environment that consists of modules and subpackages and so on.
+Steps for creating and using packages in python:-
+i) create some set of python files in a directory
+	for example, dir name is madurai
+	add.py contains add function.
+	fact.py contains fact function.
+	show.py contains show function.
+ii) Now create one more file name __init__.py in madurai directory.
+iii) To make all of the functions available when we've imported madurai, we need to put explicit import statements in __init__.py as follows:
+from madurai.add import add
+from madurai.fact import fact
+from madurai.show import show
+iv) After we add these lines to __init__.py, we have all of the modules, classes available when we import the madurai package.
+eg:-
+import madurai;
+madurai.show();
+madurai.add();
+madurai.fact();
+
+
+
+----------------------------
+Python - Date and Time
+----------------------------
+Time Tuple
+	Many of Python's time functions handle time as a tuple of 9 numbers.
+
+Index	     strut_time		      Example
+-----------------------------------------------------------
+0	--> tm_year (Year)		--> 2018
+1	--> tm_mon (Month)	--> 1 to 12
+2	--> tm_mday (Day)	--> 1 to 31
+3	--> tm_hour (Hour)	--> 0 to 23
+4	--> tm_min (Minute)	--> 0 to 59
+5	--> tm_sec (Seconds)	--> 0 to 60
+6	--> tm_wday (Week Day)	--> 0 to 6   (monday-0 and sunday-6)
+7	--> tm_yday (Day of Year)	--> 1 to 365/366
+8	--> tm_isdst (Daylightsave)	--> -1/0/1 (-1 means DST)
+
+Time Module:-
+------------------
+	The time module is available in Python which provides functions for working  with times and for converting between representations.
+	To use time module function, we should import time module.	
+
+Time Module Functions:-
+-----------------------------
+1) time.time()	--> Returns the current system time in ticks(seconds).
+2) time.localtime([secs])
+		--> Returns a time-tuple with all nine items valid to local time.
+3) time.gmtime([secs])
+		--> Returns a time-tuple with all nine items valid to GMT.
+4) time.asctime([tupletime])
+		--> Returns a formatted date and time and arg should be time-tuple with all nine items valid.
+5) time.ctime([secs])
+		--> Like asctime(localtime(secs)) and without arguments is like asctime()
+6) time.mktime(tupletime)
+		--> It is the inverse function of localtime(). Its argument is the struct_time or full 9-tuple and it returns seconds, for compatibility
+with time().
+7) time.sleep(secs)	--> It suspends execution for the given number of seconds.
+8) time.strftime(fmt[,tupletime])
+		--> Accepts an instant expressed as a time-tuple in local time and returns a string representing the instant as specified by string fmt.
+9) time.strptime(string,fmt)
+		--> Parses str according to format string fmt and returns the instant in time-tuple format. 
+
+Here formats are,
+%a - abbreviated weekday name
+%A - full weekday name
+%b - abbreviated month name
+%B - full month name
+%c - preferred date and time representation (short format of date and time)
+%d - day of the month (01 to 31)
+%e - day of the month (1 to 31)
+%H - hour, using a 24-hour clock (00 to 23) 
+%I - hour, using a 12-hour clock (01 to 12)
+%j - day of the year (001 to 366)
+%m - month (01 to 12)
+%M - minute
+%p - either am or pm according to the given time value
+%S - second
+%W - week number of the current year, starting with the first Monday as the 
+first day of the first week
+%w - day of the week as a decimal, Sunday=0
+%x - preferred date representation without the time (short format of date)
+%X - preferred time representation without the date (short format of time)
+%y - year without a century (range 00 to 99)
+%Y - year including the century
+%Z or %z - time zone or name or abbreviation
+
+
+Calendar Module:-
+----------------------
+	It provides calendar-related functions, including functions to print a text calendar for a given month or year.
+	By default, calendar takes Monday as the first day of the week and Sunday as the last one. To change this, call calendar.setfirstweekday() function.
+	Import calendar module to use calendar related functions.
+
+Calendar Module Functions:-
+---------------------------------
+1) calendar.calendar(year)
+		--> Returns a multiline string with a calendar for year formatted into three columns.
+2) calendar.month(year,month)
+		--> Returns a multiline string with a calendar for month of year.
+3) calendar.monthrange(year,month)
+		--> Returns two integers. The first one is the code of weekday for the first day of the month in year; the second one is the number of days in the month.
+4) calendar.setfirstweekday(weekday)
+		--> Sets the first day of each week to weekday code weekday.
+5) calendar.weekday(year,month,date)
+		--> Returns the weekday code for the given date.
+
+
+
+
+----------------------------------
+Python - Classes and Objects
+----------------------------------
+Syntax to define a class:-
+class classname:
+   'optional class doc string'
+   class_suite
+
+Explanation:-
+	The class has a documentation string, which can be accessed via ClassName.__doc__.
+	The class_suite consists of all the component statements defining class 
+members, data attributes and functions.
+	We can declare the methods with in a class like normal functions one exception that the first argument to each method is "self".
+	Python adds the self argument to the list for us; we don't need to include it when we call the methods.
+
+Syntax to define a method in a class:-
+def methodname(self,arg1,arg2..):
+     method_suite;
+
+Syntax to create an object:-
+objname=consname(args);
+
+Types of Variables:-
+------------------------
+1) Instance variables
+2) Class variables
+
+1) Instance variables:-
+	 The variables which are defined inside a method with the keyword 'self' and belongs only to the current instance of a class.
+	They are initialized at runtime when an object is created.
+	They're initialized separate copies for every objects.
+	They can be accessed through objects.
+eg:-
+	objname.variablename;
+
+2) Class variables
+	Variables declared within a class known as Class variables.
+	They are initialized only one copy for class at compilation time.
+	They can be shared by all the instances of that class.
+	They can be accessed through class name.
+eg:-
+	classname.variablename;
+
+Data Hiding:-
+	We need to name attributes with a double underscore prefix, and those attributes then are not be directly visible to outsiders.
+eg:-
+class Test:
+   __city="Madurai";
+
+
+Built-In Attributes in a class:-
+------------------------------------
+a) __dict__: Dictionary containing the class's namespace.
+b) __doc__: Class documentation string or none, if undefined.
+c) __name__: Class name.
+d) __module__: Module  name  in  which  the  class  is  defined. This attribute is "__main__" in interactive mode.
+e) __bases__: A possibly empty tuple containing the base classes, in the order 
+of their occurrence in the base class list.
+
+
+
+Built-In Methods to access attributes in a class:-
+--------------------------------------------------------
+i) setattr(obj,name,value)
+	--> To set an attribute. If attribute does not exist,then it would be created.
+ii) getattr(obj, name[, default]);
+	--> To access the attribute of object.
+iii) hasattr(obj,name);
+	--> To check if an attribute exists or not.
+iv) delattr(obj, name)
+	--> To delete an attribute.
+
+Constructors:-
+-----------------
+	It is a special member function, since it's name should be "__init__()" .
+	To initialize the objects in memory.
+	It is invoked automatically when an object is created.
+
+syntax:-
+def __init__(self,arg1,arg2...):
+   set of code;
+
+Destructors:-
+----------------
+	It is also a special member function, since it's name should be "__del__()" .
+	To destroy the objects from memory.
+	It is invoked automatically when "del" statement is executed.
+syntax:-
+def __del__(self):
+   set of code;
+
+
+Inheritance:-
+----------------
+	To create a new class from an existing class.
+	It is used for Reusability and Extensibility.
+	The derived class inherits the attributes of its base class, and we can use those attributes as if they were defined in the derived class.
+	A derived class can also override data members and methods from the base class.
+Types:-
+i) Single level inheritance.
+ii) Multi-level inheritance.
+iii) Multiple inheritance.
+iv) Hierarchical inheritance.
+
+Syntax to inherit a class:-
+class subclassname(baseclass1[,baseclass2,....]):
+   'Optional class documentation string'
+   class_suite
+eg:-
+class B(A):
+   class_suite;
+
+
+super statement:-
+	The most commonly super() is used with __init__ function in base classes. This is usually the only place where you need to do some things in a child then complete the initialization in the parent.
+syntax:-
+def __init__(self):
+   super(subclassname,self).__init__();
+   #(or) super().__init__(); (or)Baseclassname.__init__(self);
+   return;
+
+
+Polymorphism(Many forms)
+--------------------------------
+	It means that one interface, Multiple actions.
+	Common methods are used.
+Types:-
+i) Dynamic polymorphism:-(Runtime Polymorphism)
+	Methods are binding to an object during runtime.
+	Method Overriding is an example for runtime polymorphism.
+Method Overriding:-
+	A class can have a method which name is same as method name of it's base class including same args,and same return type(ie same signature).
+	Derived class can modify the statements of its base class using overriding.
+	To achieve dynamic polymorphism.
+
+
+
+
+---------------------------------
+Python - Exception Handling
+---------------------------------
+	Exception is an abnormal condition. if it is occurred in a program, then program will be terminated suddenly.
+	To overcome this problem, we have some exception handlers in python such as try,except,else,raise and finally.
+	Exceptions are occurred at runtime.
+
+List of Exceptions:-
+i) BaseException
+	-->Common base class for all exceptions
+ii) Exception
+	--> Common base class for all non-exit exceptions.
+iii) ArithmeticError
+	--> Base class for all errors that occur for numeric calculation.
+iv) OverflowError
+	--> Raised when a calculation exceeds maximum limit for a numeric type.
+v) FloatingPointError
+	--> Raised when a floating point calculation fails.
+vi) ZeroDivisonError
+	--> Raised when division or modulo by zero takes place for all numeric types.
+vii) ImportError
+	--> Raised when an import statement fails.
+viii) EOFError
+	--> Raised when there is no input from input() function and the end of file is reached.
+ix) KeyboardInterrupt
+	--> Raised when the user interrupts program execution, usually by pressing Ctrl+c.
+x) IndexError
+	--> Raised when an index is not found in a sequence.
+xi) NameError
+	--> Raised when an identifier is not found in the local or global namespace.
+xii) IOError
+	--> Raised when an input/output operation fails, such as the print statement or the open() function when trying to open a file that does not exist.
+xiii) RuntimeError
+	--> Raised when a generated error does not fall into any category.
+
+Syntax:-
+try:
+	set of sts;
+	.
+	.
+	raise exceptiontype[,arg];
+except(exception) as objname:
+	some sts;
+except(exception2) as objname:
+	some sts;
+else:
+	If there is no exception then execute this block;
+finally:
+	this would be always executed;
+	
+Explanation:-
+	* We can write set of executable statements within a try block which should be followed by atleast one except block or finally block.
+	* The try block can have more than one except blocks.
+	* If an exception is occured by a statement within a try block , then corresponding object is created and which will be thrown to corresponding except block.
+	* We can also provide a generic except clause, which handles any exception.
+	* We can also throw an exception explicitly using the keyword "raise".
+	* After the except clause(s), we can include an else-clause. If the code in the try block does not raise an exception, The code with in the else-block will be executed.
+	* Even exceptions are handled or not, the statements within a finally block will be executed.
+	* We can also handle multiple exceptions using single except block using the statement "except(exp1,exp2....expN): "
+	* An exception can have an argument , It's value that gives additional information using the statement " except(exptype1,exptype2...) as e: ".
+
+
+
+
+----------------------
+Python - Files I/O
+----------------------
+OS Module:-
+	It provides methods to process files as well as directories.
+	os module provides methods to perform file-processing operations, such as renaming and deleting files and directories.
+	To use methods of os module, import os module.
+
+Functions of OS Module:-
+i) os.mkdir(path)		--> To create a new directory.
+ii) os.rmdir(path)		--> To remove a directory.
+iii) os.chdir(path)		--> To change current working directory to path.
+iv) os.getcwd()		--> Returns current working directory.
+v) os.remove(path)		--> To remove a file.
+vi) os.rename(src,dest)	--> To rename a file/dir.
+vii) os.listdir(path)		--> To list out files and folders of given path.
+
+
+File object:-
+	A file object is created using open function.
+	It defines functions and methods to manipulate files by default. 
+i) Open a file:-
+	To read or write a file,we should open it using open() function.
+syntax:-
+fileobj=open(filename[,accessmode]);
+Here access modes are,
+	w	--> Write mode
+	r	--> Read Mode(It is a default)
+	w+	--> Opens a file for both writing and reading. 
+	r+	--> Opens a file for both reading and writing.
+	a	--> Append mode.
+	a+	--> Opens a file for both appending and reading.
+	wb	--> Write binary file
+	rb	--> Read binary file
+	wb+	--> Write and read binary file
+	rb+	--> Read and write binary file
+
+ii) File object attributes:-
+fileobj.name	--> Returns name of the file.
+fileobj.mode	--> Returns access mode with which file was opened.
+fileobj.closed	--> Returns true if file is closed, false otherwise.
+
+Methods of File object:-
+i) write()		--> The write() method writes any string to an open file. 
+syntax:-
+   fileobj.write(string);
+
+ii) read()		--> The read() method reads a string from an open file.
+syntax:-
+   fileobj.read([count]);
+	Here, count is the no.of bytes to be read from the opened file.
+	This method starts reading from the beginning of the file.
+	If count is missing, then it tries to read as much as possible, maybe until the end of file.
+
+iii) readline([size])
+	--> Reads one entire line from the file. A trailing newline character is kept in the string.
+	
+iv) tell()		--> It tells the current position within the file;
+syntax:-
+   fileobj.tell();
+
+v) seek()		--> It changes the current file position.
+syntax:-
+   fileobj.seek(offset[,  from]);
+	* The offset argument indicates the number of bytes to be moved.
+	* The from argument specifies the reference position from where the bytes are to be moved.
+	from is set to 0(SEEK_SET) --> Beginning of the file.
+	from is set to 1(SEEK_CUR) --> Current position of the file.
+	from is set to 2(SEEK_END) --> End of the file.
+
+vi) flush()		--> It flushes internal buffer.
+syntax:-
+fileobj.flush();
+
+vii) Close a file:-
+syntax:-
+fileobj.close();
+
+
+
+
+--------------------------------
+Python - GUI Programming
+--------------------------------
+	Python provides various options for developing graphical user interfaces (GUI).
+
+Tkinter:-
+	Tkinter is the Python interface to the Tk GUI toolkit shipped with Python.
+	Tkinter provides a fast and easy way to create GUI applications.
+	Tkinter provides a powerful object-oriented interface to the Tk GUI toolkit.
+Steps to create GUI application using Tkinter:-
+* Import the tkinter module.
+* Create the GUI application main window.
+* Add one or more widgets to the GUI application.
+* Enter the main event loop to take action against each event triggered by the user.
+
+Tkinter Widgets:-
+	Tkinter provides various controls, such as buttons, labels and text boxes used in a GUI application. These controls are commonly called widgets.
+
+Available Widgets in Tkinter:-
+-----------------------------------
+1) Label
+-----------
+	To provide a single-line caption for other widgets. It can also contain images.
+syntax:-
+l1=Label(master, options);
+master	--> represents the parent window.
+options	--> Options can be used as key-value pairs separated by commas.
+Options are,
+bd	--> To set border width in pixels. default is 2.
+bg	--> To set background color.
+cursor	--> To specify cursor type (arrow, dot etc.),
+fg	--> To set foreground color.
+font	--> To set font. eg: font("verdana",15,"bold");
+height	--> To set height of the widget.
+width	--> To set width of the widget.
+image	--> To set image to be displayed on the widget.
+padx	--> To set padding left and right of the text.
+pady	--> To set padding above and below of the text.
+relief	--> To specify the type of the border (SUNKEN,RAISED,GROOVE, RIDGE)
+bitmap	--> To display bitmap. (error, hourglass, info, question, warning)
+justify	--> To specify justification( left, center, right)
+text	--> To display one or more lines of text in a label widget
+textvariable --> To slave the text displayed in a label widget to a control variable of class StringVar, set this option to that variable.
+
+2) Button
+------------
+	To display buttons in python application.
+syntax:-
+b1=Button(master,options);
+options are,
+	bd, bg, fg	, font, height, width, image, padx, pady, relief	
+
+3) tkinter.messagebox
+--------------------------
+	To display message boxes in an application. This module provides a number of  functions that we can use to display an appropriate message.
+syntax:-
+tkinter.messagebox.functionName(title, message);
+here function names are,
+showinfo()
+showwarning()
+showerror()
+askquestion()	# returns yes/no
+askokcancel()	# returns True/False
+askyesno()	# returns True/False
+askyesnocancel()	# returns True/False/None
+askretrycancel()
+
+4) Canvas
+--------------
+	To draw shapes, such as lines, ovals, polygons and rectangles.
+syntax:-
+c1=Canvas(master,options);
+options are,
+	bd, bg, height, width, relief
+methods:-
+i)    create_line(x1, y1, x2, y2, options);
+ii)   create_oval(x1, y1, x2, y2, options);
+iii)  create_rectangle(x1, y1, x2, y2, options);
+iv)  create_arc(coord, start, extent, fill);
+v)   create_image(x, y, image=filename);
+	here filename=PhotoImage(file="file path & name");
+vi)  create_polygon(x0, y0, x1, y1,...xn, yn, options)
+vii) create_text(x1, y1, text, options);
+
+
+5) Entry
+-----------
+	To display a single-line text field for accepting values from a user.
+syntax:-
+t1=Entry(master, options);
+options are,
+	bd, bg, font, height, width, cursor, justify,
+	show  --> To make a password entry.
+methods:-
+i) insert(index, string)	--> To insert a string at the given index.
+ii) delete(start[,last=None] )	--> Deletes characters from given index, up to but not including the character at position last. If 2nd argument is ignored, only the single character at the given index.
+iii) get()			--> Returns the entry's current text as a string.
+iv) select_clear()		--> Clears  the  selection. 
+v) select_range (start, end )	--> Selects the text from start index and before end index.
+
+6) Text
+----------
+	To edit and display text in multiple lines.
+syntax:-
+ta=Text(master, options);
+options are,
+	bd, bg, font, height, width, cursor,
+	selectbackground	--> The background color to use displaying selected text.
+	selectborderwidth	--> The width of the border to use around selected text.
+	wrap		--> WORD, CHAR
+	state		--> disabled, normal
+
+7) ScrolledText
+	It is defined in tkinter.scrolledtext module.
+	It is like as Text widget with scrollbar to scroll the text from the widget.
+
+8) Checkbutton
+-------------------
+	To display a number of options as checkboxes. User can select multiple options at a time.
+syntax:-
+c1=Checkbutton(master, options);
+options are,
+	bd, bg, font, height, width, cursor, image, justify, text
+	variable	--> The control variable that to get the value of checkbutton and it can be either an IntVar or a StringVar.
+methods:-
+i) deselect()	--> Clears (turns off) the checkbutton.
+ii) select()	--> Sets (turns on) the checkbutton.
+iii) toggle()	--> Clears the checkbutton if set, sets it if cleared. 
+
+
+9) Radiobutton
+------------------
+	To display a number of options as radio buttons.
+syntax:-
+r1=Radiobutton(master, options);
+options are,
+	bd, bg, font, height, width, cursor, image, justify, text
+	value	--> When a radiobutton is turned on by the user, its control variable is set to its current value option. If the control variable is an IntVar, give each radiobutton in the group a different integer value option. If the control variable is a StringVar, give each radiobutton a different string value option.
+	variable	--> The control variable that this radiobutton shares with the other radiobuttons in the group. This can be either an IntVar or a StringVar.
+methods:-
+i) deselect()	--> Clears (turns off) the radiobutton.
+ii) select()	--> Sets (turns on) the radiobutton.
+
+9) Frame
+------------
+	It is used as a container widget to organize other widgets.
+syntax:-
+f1=Frame(master, options);
+options are,
+	bd, bg, font, height, width, cursor.
+	fill=BOTH/X/Y
+	expand=0 (or) 1
+
+10) LabelFrame
+-------------------
+	It is a simple container widget. Its primary purpose is to act as a spacer or container for complex window layouts.
+	It has the features of a frame plus the ability to display a label.
+syntax:-
+w=LabelFrame(master, options);
+options are,
+	bd, bg, font, height, width, cursor, text,relief.
+
+11) Listbox
+-------------
+	To display a list of items from which a user can select a number of items.
+syntax:-
+lb=Listbox(master, options);
+options are,
+	bd, bg, font, height, width, cursor,
+	selectmode --> single, multiple, extended
+methods:-
+i) activate(index)	--> Selects the item specifies by the given index.
+ii) curselection()	--> Returns a tuple containing the line numbers of the selected element or elements, counting from 0.
+iii) delete(start, end=None)
+		--> Deletes the items from start index to before end index. If the second argument is omitted, the single item with index start is deleted.
+iv) get(first,last=None )
+		--> Returns a tuple containing the text of the lines with indices from first to last,  inclusive.
+v) insert(index, *elements )
+		--> Insert one or more new items into the listbox before the line specified by index.
+vi) size()		--> Returns the number of lines in the listbox.
+
+
+
+12) Spinbox
+---------------
+	It is a variant of the standard Tkinter Entry widget, which can be used to select from a fixed number of values.
+syntax:-
+s1=Spinbox(master, options);
+options are,
+	bd, bg, fg, font, height, width, relief, from_, to
+
+13) Menu
+------------
+	It is used to provide various commands to a user.
+	To create pop-up menu, toplevel menu and pull-down menu.
+syntax:-
+m1=Menu(master, options);
+options are,
+	bd, bg, fg, font, height, width, relief, tearoff=0
+methods:-
+add_command(options)	--> Adds a menu item to the menu.
+add_radiobutton(options)	--> Creates a radio button menu item.
+add_checkbutton(options)	--> Creates a check button menu item.
+add_cascade(options)	--> Creates a new hierarchical menu by associating a given menu to a parent menu.
+add_separator()		--> Adds a separator line to the menu.
+
+
+
+
+Geometry Management  (Layout):-
+-----------------------------------------
+	All Tkinter widgets have access to specific geometry management methods, which are used for organizing widgets throughout the parent widget area.
+Available Geometry Manager classes:-
+i) pack
+ii) grid
+iii) place
+
+i) pack() method:-
+	It organizes widgets in blocks before placing them in the parent widget.
+syntax:-
+widget_obj.pack(pack_options);
+options are:-
+
+fill	--> Determines whether widget fills any extra space allocated to it by the packer, or keeps its own minimal dimensions: none(default), X(fill only horizontally), Y(fill only vertically), or BOTH (fill both horizontally and vertically).
+
+side	--> Determines which side of the parent widget packs against:  TOP (default), 
+BOTTOM, LEFT, RIGHT.
+
+anchor	--> determines direction : N, S, W, E, NE, NW,SE, SW, CENTER
+
+ipadx,ipady,padx,pady
+eg:-
+b1=Button(root, text="Click");
+b1.pack(fill=BOTH,side=RIGHT);
+
+ii) grid() method:-
+	It organizes widgets in a table-like structure in the parent widget.
+syntax:-
+widget_obj.grid(grid_options);
+options are:-
+row		--> The row to put widget in;
+column		--> The column to put widget in; default 0 (leftmost column).
+padx, pady 	--> How many pixels to pad widget, horizontally and vertically.
+rowspan		--> How many rows widget occupies; default 1
+columnspan	--> How many columns widget occupies; default 1.
+eg:-
+b1=Button(root, text="Click");
+b1.grid(row=0,column=0, padx=5, pady=5);
+
+iii) place() method:-
+	It organizes widgets by placing them in a specific position in the parent widget.
+syntax:-
+widget_obj.place(place_options);
+options are:-
+bordermode	--> inside (the default) to indicate that other options refer to the parent's inside (ignoring the parent's border), outside, ignore.
+height, width	--> Height and width in pixels.
+x, y		--> Horizontal and vertical offset in pixels.
+eg:-
+b1=Button(root, text="Click");
+b1.place(bordermode="ignore", width=90, height=30, x=150, y=250);
+
+
+Event and Binds:-
+----------------------
+	A Tkinter application runs most of its time inside an event loop, which is entered via the mainloop method. It is waiting for events to happen. Events can be key presses or mouse operations by the user. 
+	Tkinter provides a mechanism to let the programmer deal with events. For each widget, it's possible to bind Python functions and methods to an event. 
+
+syntax:-
+widget.bind(event, handler);
+	If the defined event occurs in the widget, the "handler" function is called with an event object.
+
+Events are:
+--------------
+<Enter>
+<Leave>
+<Motion>
+<ButtonPress>
+<ButtonRelease>
+<Button-1>	(or)	<ButtonPress-1>
+<Button-2>	(or)	<ButtonPress-2>
+<Button-3>	(or)	<ButtonPress-3>
+<Double-1>	(or)	<Double-Button-1>
+<Double-2>	(or)	<Double-Button-2>
+<Double-3>	(or)	<Double-Button-3>
+<KeyPress>
+<KeyRelease>
+<FocusIn>
+<FocusOut>
+
+Event handling functions should be following syntax:-
+--------------------------------------------------------------
+def function_name(event):
+   some sts;
+   return;
+
+
+
+
+-----------------------------
+Python - MultiThreading
+-----------------------------
+	A thread is a small piece of code in a program.
+	A Python application can execute more than one threads concurrently to utilize the cpu efficiently.
+	Even all the threads are running on same resource, but they have own program counter,own stack and own register states.
+	Threads sometimes called light-weight processes and they do not require much memory overhead; they care cheaper than processes.
+	A  thread has a beginning, an execution sequence, and a conclusion. 
+	It  has  an instruction pointer that keeps track of where within its context it is currently running.
+	Thread can be pre-empted (interrupted)
+	Thread can be temporarily put on hold (also known as sleeping) while other threads are running - this is called yielding.
+
+Threading Module:-
+	This module has a Thread class which should be inherited to create a new thread.
+Constructor of Thread class:-
+threading.Thread();
+Methods of Thread class:-
+i) run()		--> It is the entry point for a thread.
+ii) start()		--> It starts a thread by calling the run method.
+iii) join([time]):	--> It waits for threads to terminate.
+iv) isAlive()	--> It checks whether a thread is still executing.
+v) getName()	--> It returns the name of a thread.
+vi) setName()	--> It sets the name of a thread.
+
+Functions in threading module:-
+i) threading.active_count()
+	--> It returns the number of thread objects that are active in thread group.
+ii) threading.current_thread()
+	--> It returns the current thread objects in the caller's thread control.
+iii) threading.enumerate()
+	--> It returns a list of all thread objects that are currently active.
+
+Synchronization:-
+	* A method wants to allow only one thread at a time to execute by implementing locking mechanism.
+	* Whenever a thread enters into locked method, it is locked and monitored. Meanwhile, other threads are waiting for sometime until it terminates.
+	* It is used to achieve InterThread Communication. (Output of one thread is used as input by another thread.)
+	* It is used to avoid DeadLock prone.
+
+threading.Lock class:-
+	It allows us to implement synchronized methods.
+constructor:-
+threading.Lock();
+	It creates a new lock object.
+Methods of threading.Lock class:-
+i) acquire()	--> To force threads to run synchronously. 
+ii) release()	--> To release the lock when it is no longer required.
+
+
+
+
+
+------------------------
+Python - Networking
+------------------------
+
+Network  :
+	A network is nothing but a connection of autonomous computers and peripherals.Network enables the sharing of resources and communication. Internet is a network of networks.
+       
+Protocols :-
+	It is a Network software.
+ 	Communication in a network or a different network requires certain set of rules called protocols.
+	It describes how to communicate with systems and how to pass the data over network.
+Basic protocols are,
+HTTP(Hyper Text Transfer Protocol).
+	It enables interaction with internet.
+	It enables web browser(webclient) with web server for accessing internet services.
+FTP(FileTransferProtocol)
+	enables transfer of files between computers.
+SMTP(SimpleMailTransferProtocol)
+	provides email facility.
+TCP/IP ---> enables LAN services.
+
+IPAddress:-
+	It is a Logical Address.
+	Every computer has a unique IP address for identification in network.
+	It is a 32 bit number which has four numbers separated by periods.
+	A sample IPaddress is 192.9.200.25
+
+PortNo:-
+	It is a Physical address.
+	It is a 16 bit number(0-65535).
+	where the socket has created and data has to be send,and to be processed.	
+
+Socket :-
+	Socket is a one which acts as medium of transfer of data in a network in which TCP/IP acts as protocol and IPaddress forms the address of the Socket.
+	Socket is madeup through ipaddress and portno.
+
+Domain Naming Service(DNS):-
+	It is very difficult to remember the ip address, alternate solution to this problem is domain naming service(DNS).
+	domain name for GMail server is www.gmail.com
+
+UniformResourceLocator(URL):-
+	To locate resources and services in Internet.
+format:-
+protocol://ipaddress(or)hostname:portno/actualfilepath?querystring
+eg:-
+1.http://www.yahoo.com
+2.http://192.9.200.25:8000/sports/cricket?name=sasi&pwd=naga
+		 	x-------------------------x
+
+socket:-
+	This module provides socket operations and some related functions.
+	On Unix, it supports IP (Internet Protocol) and Unix domain sockets.
+	On other systems, it only supports IP. 
+Functions of socket module:-
+i) socket.gethostname()		--> It returns current host name.
+ii) socket.gethostbyname(hostname)	--> It returns ipaddress of given host.
+iii) socket.gethostbyname_ex(host)	--> It returns host name, alias list and address list.
+iv) socket.gethostbyaddr(hostname)	--> It returns host name, alias list and address list.
+
+socket class:-
+	socket is a class which is defined in socket module. A socket object represents one endpoint of a network connection.
+constructor:-
+socket([socket_family,socket_type,prototype]);
+	A socket object should be created for both server and client side.
+
+Here,
+socket_family:	For transport mechanism.It is either AF_INET(Default) or AF_UNIX .
+
+socket_type:	For type of communication between 2 endpoints.
+		It is either SOCK_STREAM(Default) or SOCK_DGRAM.
+
+protocol:		It may be used to identify a variant of a protocol within a domain and type.		It's Default value is 0.
+
+Methods of Socket:-
+For Server:-
+i) bind(addr)
+	--> It binds address (hostname, port number) to socket.
+
+ii) listen(backlog)
+	--> It starts listening for incoming connections.
+
+iii) accept()
+	--> It accepts clients request, connection and returns new socket and client address.
+
+For Client:-
+iv) connect(addr)
+	--> It connects the socket to a remote address(host,port) and initiates TCP server connection.
+
+General:-(for server, client and UDP program)
+v) recv(buffer_length)	--> It receives TCP message.
+vi) send(data)		--> It transmits TCP message.
+vii) recvfrom(buffer_length,[,flags])
+	--> It receives data and sender's address in UDP.
+viii) sendto(data[, flags], addr)
+	--> It sends data to given address in UDP.
+ix) recv_into(buffer[, nbytes[, flags]])
+	--> It receives data (into a buffer)
+x) recvfrom_into(buffer[, nbytes [, flags]])
+	--> It receives data and sender's address (into a buffer) in UDP.
+xi) close()		--> It closes the socket.
+
+
+
+
+-----------------------
+Python - DataBase
+-----------------------
+	Python DB-API provides required interfaces for accessing database.
+	MySQLdb is an interface for connecting to a MySQL database server from Python. It implements the Python Database API v2.0.
+	To access MySQL db from Python, import MySQLdb module.
+
+Steps for accessing DB:-
+i) Connect with DB.
+syntax:-
+db=MySQLdb.connect(hostname,userid,password,dbname);
+
+ii) Create cursor object.
+syntax:-
+cursor=db.cursor();
+
+iii) Execute SQL command.
+syntax:-
+cursor.execute(sqlcmd);
+
+iv) Fetch the records from cursor.
+a) cursor.fetchone();
+	--> Fetches single record from cursor. None indicates that no records avail.
+b) cursor.fetchall();
+	--> Fetches all available records from cursor.
+c) cursor.fetchmany([size]);
+	--> Fetch upto the given size rows from the cursor. If size is not defined cursor.arraysize is used.
+
+v) Close the DB connection.
+syntax:-
+db.close();
+
+Note:-
+	After executing DML commands, 
+	On successfull, invoke db.commit() method.
+	On Failure, invoke db.rollback() method.
+
+
+
+
+
+----------------------------------
+Python - Regular Expression
+----------------------------------
+	A regular expression is a special sequence of characters that helps you match or find other strings or sets of strings, using a specialized syntax held in a pattern.
+	The module re provides full support for regular expressions in Python. The re module raises the exception re.error if an error occurs while compiling or using a 
+regular expression.
+
+match() function:-
+	It attempts to match RE pattern to string with optional flags.
+syntax:-
+re.match(pattern, string, flags=0)
+	The re.match function returns a match object on success, none on failure.
+eg:-
+import re;
+matchobj=re.match(".+@[a-z]+\.[a-z]+","amsasi@gmail.com");
+if matchobj:
+	print "valid";
+else:
+	print "invalid";

@@ -1,0 +1,200 @@
+		Swing
+
+	It is a JFC(Java Foundation classes) Component.
+	It is a large UI package.
+	It has defined 4 times of classes compare with AWT.
+	Since swing components dont have own operating platform window and they can be added with containers themselves, they are all light weight components except JWindow,JFrame, JDialog and JApplet.
+	swing components can be transparent.
+	They can be added as Pluggable Look And Feel(PLAF).
+	All the light weight swing components are derived from class JComponet which is derived from class java.awt.Container.
+
+Features:
+1) Easy mouseless Operation.
+2) Pluggable look and feel.
+3) They use fewer System resources.
+4) Set the border surrounding the components.
+
+
+classes in javax.swing package:
+
+JRootPane,JLayeredPane,JDesktopPane,
+JOptionPane,JScrollPane,JTable,JToolBar,
+JProgressBar,JSlider,
+AbstractButton
+    JButton
+    JToggleButton
+          JRadioButton
+          JCheckBox
+BorderFactory,Border,KeyStroke,
+JComponent,JLabel
+JTextComponent
+     JTextArea
+     JTextField
+          JPasswordField
+JList,JComboBox,LookAndFeel,UIManager
+
+
+
+JComponent:-
+public void updateUI();
+public void setBorder(Border);
+public void setToolTipText(String);
+public void setOpaque(boolean);
+
+JFrame
+constructors:-
+JFrame();
+JFrame(String);
+methods:-
+public void setTitle(String);
+public void setJMenuBar(JMenuBar);
+public JRootPane getRootPane();
+public void setDefaultCloseOperation(int);
+   where int is JFrame.EXIT_ON_CLOSE; -> 3
+   where int is JFrame.DISPOSE_ON_CLOSE; -> 2
+
+AbstractButton:-
+methods:-
+public void setText(String);
+public void setMnemonic(char);
+public void setIcon(Icon);
+	ImageIcon(String path);
+public void setRolloverIcon(Icon);
+public void setHorizontalTextPosition(int);
+public void setVerticalTextPosition(int);
+
+JButton:-
+constructors:-
+JButton();
+JButton(String);
+JButton(Icon);
+JButton(String,Icon);
+
+
+BorderFactory
+	It defines several static methods to get Border object.
+methods:-
+public static Border createEmptyBorder();
+public static Border createLineBorder(Color);
+public static Border createLineBorder(Color,int thickness);
+public static Border createLineBorder(Color,int thickness,boolean);
+public static Border createEtchedBorder();
+public static Border createRaisedBevelBorder();
+public static Border createLoweredBevelBorder();
+public static Border createCompoundBorder(Border out,Border in);
+public static Border createMatteBorder(int top,int left,int bottom,int right,Color);
+public static TitledBorder createTitledBorder(String title);
+public static TitledBorder createTitledBorder(Border,String title);
+
+
+JOptionPane
+	To get MsgBox,Inputbox,ConfirmBox.
+methods:-
+public static void showMessageDialog(Component,Object content);
+public static void showMessageDialog(Component,Object content,String title,int msgboxstyle);
+public static int showConfirmDialog(Component,Object);
+public static int showConfirmDialog(Component,Object content,String title,int confirmboxstyle);
+public static String showInputDialog(Component,Object);
+public static String showInputDialog(Component,Object content,String title,int inputboxstyle);
+constant fields:-
+JOptionPane.YES_OPTION
+	.NO_OPTION
+	.OK_OPTION
+	.CANCEL_OPTION
+	.YES_NO_OPTION
+	.YES_NO_CANCEL_OPTION
+	.OK_CANCEL_OPTION
+	.QUESTION_MESSAGE
+	.INFORMATION_MESSAGE
+	.WARNING_MESSAGE
+	.ERROR_MESSAGE
+
+
+UIManager
+	It provides several static methods to set look and feel for the components.
+methods:-
+1) public static void setLookAndFeel(LookAndFeel) throws UnsupportedLookAndFeelException;
+2) public static void setLookAndFeel(String) throws UnsupportedLookAndFeelException,ClassNotFoundException;
+3) public static String getSystemLookAndFeelClassName();
+
+subclasses of LookAndFeel
+1)javax.swing.plaf.metal.MetalLookAndFeel
+2)com.sun.java.swing.plaf.motif.MotifLookAndFeel
+3)com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+4)javax.swing.plaf.nimbus.NimbusLookAndFeel
+5)com.birosoft.liquid.LiquidLookAndFeel
+
+To update l&f for particular component, invoke following method:
+	public void updateUI();
+
+To update l&f for all the components in a container, invoke following method of class javax.swing.SwingUtilities:-
+public static void updateComponentTreeUI(Container);
+
+
+JProgressBar
+	To inform the status of a process.
+constructors:-
+JProgressBar();
+JProgressBar(int orientation);
+JProgressBar(int orientation,int min,int max);
+methods:-
+public void setOrientation(int);
+public void setMinimum(int);
+public void setMaximum(int);
+public void setValue(int);
+public void setStringPainted(boolean);
+public void setString(String);
+public void setIndeterminate(boolean);
+
+Timer
+	To delay a process for specified milli seconds once.
+constructor:-
+Timer(int delaymilliseconds,ActionListener);
+methods:-
+public void start();
+public void stop();
+
+
+JSlider
+	To set color,volume or some other process for other components.
+constructors:-
+JSlider();
+JSlider(int orientation);
+JSlider(int orientation,int min,int max,int initialvalue);
+Methods:
+public void setOrientation(int);
+public void setMinimum(int);
+public void setMaximum(int);
+public void setValue(int);
+public void setPaintLabels(boolean);
+public void setPaintTicks(boolean);
+public void setMinorTickSpacing(int);
+public void setMajorTickSpacing(int);
+public void addChangeListener(javax.swing.event.ChangeListener);
+
+
+JTable
+	To show the records as row/column manner.
+constructors:-
+JTable();
+JTable(int rows,int cols);
+methods:-
+public void setModel(TableModel)
+	DefaultTableModel(int row,int column);
+public void setRowHeight(int);
+public void setGridColor(Color);
+public void setShowGrid(boolean);
+public void setValueAt(Object value,int row,int column);
+public Object getValueAt(int row,int column);
+
+JDesktopPane
+	To create a virtual desktop.
+constructors:-
+JDesktopPane();
+
+JInternalFrame
+	It is like as JFrame which can be added in JDesktopPane.
+constructors:-
+JInternalFrame(String title, boolean resizable, boolean closable, boolean maximizable, boolean iconifiable);
+
+

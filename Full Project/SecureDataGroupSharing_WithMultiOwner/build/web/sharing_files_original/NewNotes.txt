@@ -1,0 +1,59 @@
+1.Register a JDBC driver in a java appln.
+eg:-
+Class.forName("com.mysql.jdbc.Driver");
+		(or)
+DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+
+2.Connect with DB.
+syntax:-
+Connection con=DriverManager.getConnection(driverPath,uid,pwd);
+eg:-
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/dbname","root","")//for mysql driver
+
+3.create SQL commands.
+syntax:-
+PreparedStatement ps=con.prepareStatement(sqlcommand);
+eg:-
+PreparedStatement ps=con.prepareStatement("insert into employee values(?,?,?,?,?)"); // ? is called as parameter symbol.
+
+4. Passing the values to parameters of SQL command.
+eg:-
+ps.setInt(1,1001);
+ps.setString(2,"Niranjan");
+ps.setString(3,"Engr");
+ps.setFloat(4,45000);
+ps.setString(5,"2014-06-22");
+
+5.Execute the SQL Command.
+eg:-
+boolean b=ps.execute();//for DDL commands(create,alter,drop,truncate)
+int n=ps.executeUpdate();//for DML commands(insert,update,delete)
+ResultSet rs=ps.executeQuery();// for select command
+
+6. Move the records 1 by 1 from ResultSet
+boolean flag=rs.next();	//To move to next record from current record and it returns true if moved place having record otherwise it returns false.
+
+7. Get the columns from ResultSet.
+rs.getString(1);(or)rs.getString(columnname);
+rs.getInt(2);
+rs.getFloat(3);
+
+
+
+
+
+
+1) create table customer(custid number,name varchar2(20),city varchar2(20),amount number(15,2),dob date);
+
+2) insert into customer values(101,'Santhosh','Madurai',2500000,'22-may-1993');
+
+3) delete from customer;
+    delete from customer where custid=101;
+    delete from customer where city='Madurai' and amount<=200000;
+
+4) update customer set city='Thirumanagalam',amount=5000000 where custid=101;
+
+5) select * from customer;
+    select name,amount from customer;
+    select * from customer where custid=101;
+    select custid,name,amount from customer where custid=101;

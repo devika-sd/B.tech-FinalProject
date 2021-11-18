@@ -1,0 +1,68 @@
+Why do we migrate from POPS to OOPS?
+	1) Because of security.
+	In POPS anybody can access all the functions, hence there is no security.
+	But in OOPS, if we want to access members of a class, we have to create an object.
+	2) OOPs is used to develop real time applications easily.
+
+		OOPs:
+Defn:-
+	A program is divided into collection of objects.
+	It is used for security,reusability,extensability, reducing complexity and human understandability.
+
+Concepts of OOPS:-
+classes&objects
+Data abstraction
+Data encapsulation
+Inheritance
+Polymorphism
+
+Class & objects
+	" Class is a logical entity. "
+	Class is a collection of data members and member functions into a single unit.
+	"Object is a physical entity(real time entity)."
+	Object is an instance(memory initialization) of a class.
+	Every object has its own memory location and every object has lot of properties and lot of functions.
+
+Data abstraction
+	since members are defined within a class they've abstracted.
+	It is used to reduce the complexity of coding.
+	Members can be accessed by someone without knowledge of how they're functioned.
+
+Data Encapsulation
+	Since members are wrapped and covered by a class,they're more secure.
+
+Inheritance
+	To create a new class from an existing class.
+	Reusability and extensability.
+	Common properties are derived from base class.
+
+Polymorphism(many forms)
+	It means that one interface,multiple actions.
+	It is used for common class of actions.
+	Common methods are used.
+
+
+Note:-
+	Accoring to object we've two types of languages.
+such as,
+1.Object based programming language.
+	There are only class,obj,abstraction and encapsulation. There are no inheritance and polymorphism.
+eg:
+	VB,ASP
+2.Object oriented programming language.
+	It is an object based programming with inheritance and polymorphism.
+eg:
+	C++,Java,Dotnet
+
+
+
+
+pops			oops
+it is divided into	it is divided into no.of
+no.of modules.	objects.
+
+It is performed	It is performed based
+based on the	on the concept
+concept		"Who is being 
+"What is 		affected"
+happening"
